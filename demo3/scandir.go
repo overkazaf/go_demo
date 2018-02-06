@@ -7,7 +7,7 @@ import (
 )
 
 func scan(dirname string, level int, limit int) {
-	fmt.Println(dirname)
+	fmt.Println("d", dirname)
 	if level > limit {
 		return
 	}
@@ -23,8 +23,8 @@ func scan(dirname string, level int, limit int) {
 			dirArray = append(dirArray, nextDirname)
 			idx++
 		} else {
-			sep := strings.Repeat("-", level)
-			fmt.Println("|", sep, fi.Name())
+			sep := strings.Repeat(" ", level)
+			fmt.Println("-", sep, fi.Name())
 		}
 	}
 
